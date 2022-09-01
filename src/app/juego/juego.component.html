@@ -1,0 +1,23 @@
+<section id="game">
+    <div class="vista">
+        <div class="dados">
+            <app-dado (enviar)="updateAciertos($event)"></app-dado>
+            <app-dado (enviar)="updateAciertos($event)"></app-dado>
+            <app-dado (enviar)="updateAciertos($event)"></app-dado>
+            <app-dado (enviar)="updateAciertos($event)"></app-dado>
+            <app-dado (enviar)="updateAciertos($event)"></app-dado>
+        </div>
+    </div>
+
+    <div class="resultado">
+        <p>{{mensaje}}</p>
+    </div>
+
+    
+    <div id="botones">
+        <button class="start-btn" #boton id="girar" (click)="start(); habilitar()" [disabled]="!isDisabled">Girar</button>
+        <button class="start-btn" #boton id="parar"(click)="stop(); deshabilitar()" [disabled]="isDisabled">Parar</button>
+    </div>
+</section>
+
+
